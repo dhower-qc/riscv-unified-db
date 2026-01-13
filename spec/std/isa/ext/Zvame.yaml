@@ -1,0 +1,24 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# yaml-language-server: $schema=../../../schemas/ext_schema.json
+
+$schema: "ext_schema.json#"
+kind: extension
+name: Zvame
+long_name: Attached Matrix Extension
+description: |
+  The Attached Matrix Extension (AME) adds instructions to accelerate tensor codes at the heart of
+  many machine learning and HPC applications.
+type: unprivileged
+versions:
+  - version: "0.1"
+    state: development
+    contributors:
+      - name: Derek Hower
+        email: dhower@qti.qualcomm.com
+      - name: Luca Maroncelli
+        email: lmaronce@qti.qualcomm.com
+      - name: Eric Mahurin
+        email: emahurin@qti.qualcomm.com
+

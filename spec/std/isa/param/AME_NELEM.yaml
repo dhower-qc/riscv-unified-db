@@ -1,0 +1,22 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# yaml-language-server: $schema=../../../schemas/param_schema.json
+
+$schema: param_schema.json#
+kind: parameter
+name: AME_NELEM
+long_name: Number of elements in AME tensor
+definedBy:
+  extension:
+    name: Zvame
+description: |
+  The number of elements in any AME tensor, which is fixed regardless of datatype.
+  
+  [NOTE]
+  This is not the number of elements stored in a tensor register, but is rather
+  (a) the number of elements in an abstract tensor, and
+  (b) the number of elements in any tensor register holding a datatype whose size is equal
+  to AME_UNIT_DATATYPE_SIZE.
+schema:
+  $ref: schema_defs.json#/$defs/perfect_square

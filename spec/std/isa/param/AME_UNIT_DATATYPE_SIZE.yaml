@@ -1,0 +1,23 @@
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# yaml-language-server: $schema=../../../schemas/param_schema.json
+
+$schema: param_schema.json#
+kind: parameter
+name: AME_UNIT_DATATYPE_SIZE
+long_name: The datatype size, in bits, at which exactly one tensor fits in a tensor register
+definedBy:
+  extension:
+    name: Zvame
+description: |
+  Above AME_UNIT_DATATYPE_SIZE, a tensor is split across multiple tensor registers.
+  Below AME_UNIT_DATATYPE_SIZE, multiple tensors will fit in a single tensor register.
+
+  [IMPORTANT]
+  Implementations with different AME_UNIT_DATATYPE_SIZE values are not binary compatible.
+  Thus, ecosystems requiring portable binaries (e.g., profiles),
+  AME_UNIT_DATATYPE_SIZE must be the same across implementations.
+  This parameter enables AME as a standard to scale a wide range of markets.
+schema:
+  $ref: schema_defs.json#/$defs/64bit_unsigned_pow2
